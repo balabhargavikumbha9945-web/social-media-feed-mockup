@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Social Media Feed</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>🌐 Connectly</h1>
+    <p>Share your moments with the world!</p>
+</header>
+
+<main class="container">
+
+    <section class="create-post">
+        <h2>Create a Post</h2>
+
+        <form id="post-form">
+
+            <input type="text" id="username"
+                   placeholder="Enter your username"
+                   required>
+
+            <textarea id="content"
+                      placeholder="What's on your mind?"
+                      required></textarea>
+
+            <button type="submit">Publish Post</button>
+
+        </form>
+
+        <p id="message"></p>
+    </section>
+
+    <section class="feed">
+        <h2>Latest Posts</h2>
+
+        <div id="posts-container">
+            Loading posts...
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Connectly | Social Media Feed Mockup</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
